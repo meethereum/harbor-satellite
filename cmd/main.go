@@ -22,7 +22,7 @@ import (
 func main() {
 	var jsonLogging bool
 	flag.BoolVar(&jsonLogging, "json-logging", true, "Enable JSON logging")
-	flag.Parse()
+//	flag.Parse()
 
 	var groundControlURL string
 	var token string
