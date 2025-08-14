@@ -22,7 +22,7 @@ jobs:
         uses: sagikazarmark/dagger-version-action@v0.0.1
 
       - name: Test E2E satellite
-        uses: dagger/dagger-for-github@v7
+        uses: dagger/dagger-for-github@8.0.0
         with:
           version: "latest"
           verb: call
