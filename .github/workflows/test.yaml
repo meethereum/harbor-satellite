@@ -5,6 +5,8 @@ on:
     paths-ignore:
       - "*.md"
       - "assets/**"
+  workflow_dispatch:
+
 
 jobs:
   vulnerability-check:
