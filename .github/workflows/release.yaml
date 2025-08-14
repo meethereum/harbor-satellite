@@ -1,4 +1,4 @@
-name: Main and Release Pipeline
+name: testing e2e 
 
 on:
   push:
@@ -24,6 +24,6 @@ jobs:
       - name: Test E2E satellite
         uses: dagger/dagger-for-github@v7
         with:
-          version: ${{ steps.dagger_version.outputs.version }}
+          version: "latest"
           verb: call
           args: test-end-to-end
