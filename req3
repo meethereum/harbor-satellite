@@ -1,0 +1,7 @@
+curl --location 'http://localhost:8080/satellites' \
+--header 'Content-Type: application/json' \
+--data '{
+    "name": "satellite_1",
+    "groups": ["group1"],
+    "config_name": "config1"
+}'

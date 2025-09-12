@@ -7,28 +7,28 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password
     ports:
-      - "8100:5432"
+      - "5432:5432"
     volumes:
       - ./db:/var/lib/postgresql/data
 
-  groundcontrol:
-    image: 8gears.container-registry.com/harbor-satellite/ground-control:test
-    container_name: groundcontrol
-    environment:
-      DB_HOST: postgres
-      DB_PORT: 5432
-      DB_DATABASE: groundcontrol
-      DB_USERNAME: postgres
-      DB_PASSWORD: password
-      HARBOR_USERNAME: admin
-      HARBOR_PASSWORD: Harbor12345
-      HARBOR_URL: http://harbor-sat.kube.bupd.xyz
-      PORT: 8080
-    ports:
-      - "8080:8080"
-    depends_on:
-      - postgres
-      # - db-migrator
+  # groundcontrol:
+  #   image: 8gears.container-registry.com/harbor-satellite/ground-control:test
+  #   container_name: groundcontrol
+  #   environment:
+  #     DB_HOST: postgres
+  #     DB_PORT: 5432
+  #     DB_DATABASE: groundcontrol
+  #     DB_USERNAME: postgres
+  #     DB_PASSWORD: password
+  #     HARBOR_USERNAME: admin
+  #     HARBOR_PASSWORD: Harbor12345
+  #     HARBOR_URL: http://harbor-sat.kube.bupd.xyz
+  #     PORT: 8080
+  #   ports:
+  #     - "8080:8080"
+  #   depends_on:
+  #     - postgres
+  #     # - db-migrator
 
 volumes:
   db:

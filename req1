@@ -1,0 +1,17 @@
+curl --location 'http://localhost:8080/groups/sync' \
+--header 'Content-Type: application/json' \
+--data '{
+  "group": "group1", 
+  "registry": "http://localhost:80",
+  "artifacts": [
+    {
+
+      "repository": "myproj/myrepo",
+      "tag": ["latest"],
+      "type": "docker",
+      "digest": "sha256:19459a6bbefb63f83f137f08c1df645f8846e2cd1f44fe209294ebc505e6495e",
+      "deleted": false
+    }
+  ]
+}
+'
