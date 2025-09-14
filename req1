@@ -6,10 +6,10 @@ curl --location 'http://localhost:8080/groups/sync' \
   "artifacts": [
     {
 
-      "repository": "myproj/myrepo",
+      "repository": "library/nginx",
       "tag": ["latest"],
       "type": "docker",
-      "digest": "sha256:19459a6bbefb63f83f137f08c1df645f8846e2cd1f44fe209294ebc505e6495e",
+      "digest": "sha256:ebe6b7ee1206828d80eabed09809e94222d09fba59c7cda15da41962e06b088e",
       "deleted": false
     }
   ]
